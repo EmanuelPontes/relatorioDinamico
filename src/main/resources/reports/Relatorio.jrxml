@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Relatorio" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="f26cdc77-cd52-430a-8d02-1dcad475ae7e">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<subDataset name="atributosDataset" uuid="0d1bfff3-e899-4800-b444-daffb698ee34">
+		<queryString>
+			<![CDATA[]]>
+		</queryString>
+		<field name="name" class="java.lang.String"/>
+		<field name="description" class="java.lang.String"/>
+		<field name="priority" class="java.lang.Integer"/>
+		<field name="isVisible" class="java.lang.Boolean"/>
+		<field name="id" class="java.lang.Integer"/>
+		<field name="Value" class="java.lang.Object"/>
+	</subDataset>
+	<parameter name="AtributosDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<componentElement>
+				<reportElement x="0" y="0" width="150" height="50" uuid="054688fa-350b-4067-aea6-6fe165bfb75d"/>
+				<jr:list xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd">
+					<datasetRun subDataset="atributosDataset" uuid="059b6702-55cd-43b9-89af-14ab9c630517">
+						<dataSourceExpression><![CDATA[$P{AtributosDataSource}]]></dataSourceExpression>
+					</datasetRun>
+					<jr:listContents height="50" width="150">
+						<frame>
+							<reportElement x="0" y="0" width="58" height="15" uuid="78227886-40e6-4b52-94a8-6fc14ae0c6c9"/>
+							<textField>
+								<reportElement x="0" y="0" width="58" height="15" uuid="cf1e24b6-5dc2-4f72-a9eb-57a68c3af009"/>
+								<textElement>
+									<font size="8"/>
+								</textElement>
+								<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
+							</textField>
+						</frame>
+						<textField>
+							<reportElement x="0" y="15" width="58" height="15" uuid="745e6e35-8dd0-46bd-aebe-02886e1ec5bb"/>
+							<textElement>
+								<font size="8"/>
+							</textElement>
+							<textFieldExpression><![CDATA[$F{Value}]]></textFieldExpression>
+						</textField>
+					</jr:listContents>
+				</jr:list>
+			</componentElement>
+		</band>
+	</detail>
+</jasperReport>

@@ -1,7 +1,5 @@
 package com.empontes.relatorioDinamico;
 
-import com.empontes.relatorioDinamico.Model.Atributo;
-
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
@@ -14,6 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 import java.util.Date;
+import com.empontes.relatoriodinamico.model.Atributo;
 
 public class RelatorioDinamicoTests {
     
