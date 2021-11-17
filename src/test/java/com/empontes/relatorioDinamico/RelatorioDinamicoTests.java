@@ -1,4 +1,4 @@
-package com.empontes.relatorioDinamico;
+package com.empontes.relatoriodinamico;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.http.HttpStatus;
@@ -12,7 +12,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import java.time.LocalDate;
 import java.util.Date;
-import com.empontes.relatoriodinamico.model.Atributo;
+import com.empontes.relatoriodinamico.model.entity.Atributo;
 
 public class RelatorioDinamicoTests {
     

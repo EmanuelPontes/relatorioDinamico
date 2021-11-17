@@ -1,4 +1,4 @@
-package com.empontes.relatorioDinamico.model.entity;
+package com.empontes.relatoriodinamico.model.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

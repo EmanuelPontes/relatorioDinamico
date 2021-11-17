@@ -1,4 +1,4 @@
-package com.empontes.relatorioDinamico;
+package com.empontes.relatoriodinamico;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

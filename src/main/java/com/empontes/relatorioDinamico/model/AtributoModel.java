@@ -2,9 +2,7 @@ package com.empontes.relatoriodinamico.model;
 
 import java.io.Serializable;
 
-public class AtributoModel implements Serializable{
-    
-    static final long serialVersionUID = 2L;
+public class AtributoModel {
 
     private Integer id;
     private String name;
@@ -53,4 +51,26 @@ public class AtributoModel implements Serializable{
     public void setType(Integer type) {
         this.type = type;
     }
+
+
+    public Boolean isIsVisible() {
+        return this.isVisible;
+    }
+
+    public Boolean getIsVisible() {
+        return this.isVisible;
+    }
+
+    public void setIsVisible(Boolean isVisible) {
+        this.isVisible = isVisible;
+    }
+
+    public Integer getPriority() {
+        return this.priority;
+    }
+
+    public void setPriority(Integer priority) {
+        this.priority = priority;
+    }
+
 }

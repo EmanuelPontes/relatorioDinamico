@@ -1,7 +1,7 @@
-package com.empontes.relatorioDinamico.repository;
+package com.empontes.relatoriodinamico.repository;
 
 import java.util.List;
-import com.empontes.relatorioDinamico.model.Atributo;
+import com.empontes.relatoriodinamico.model.entity.Atributo;
 import org.springframework.data.repository.CrudRepository;
 
 public interface AtributoRepository extends CrudRepository<Atributo,Long>{

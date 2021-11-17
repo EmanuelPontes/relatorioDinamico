@@ -1,9 +1,9 @@
-package com.empontes.relatorioDinamico.Controller;
+package com.empontes.relatoriodinamico.controller;
 
 import java.util.List;
 
+import com.empontes.relatoriodinamico.model.entity.Atributo;
 import com.empontes.relatoriodinamico.repository.AtributoRepository;
-import com.empontes.relatorioDinamico.Repository.AtributoRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.crossstore.ChangeSetPersister.NotFoundException;
