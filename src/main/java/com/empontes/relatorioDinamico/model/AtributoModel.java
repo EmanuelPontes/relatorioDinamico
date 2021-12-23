@@ -1,6 +1,7 @@
 package com.empontes.relatoriodinamico.model;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class AtributoModel {
 
@@ -10,18 +11,18 @@ public class AtributoModel {
     private Integer type;
     private Boolean isVisible;
     private Integer priority;     
-    private Object value;                                                                 
+    private List<Object> values;                                                                 
     
     public Integer getId() {
         return this.id;
     }
 
-    public Object getValue() {
-        return value;
+    public List<Object> getValues() {
+        return values;
     }
 
-    public void setValue(Object value) {
-        this.value = value;
+    public void setValues(List<Object> values) {
+        this.values = values;
     }
 
     public void setId(Integer id) {

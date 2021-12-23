@@ -18,6 +18,7 @@ public class Atributo {
     @Column
     private Integer type;
 
+    // Criar uma relação de 1 pra muitos para  armazenar a lista de valores de cada atributo
     public long getId() {
         return this.id;
     }

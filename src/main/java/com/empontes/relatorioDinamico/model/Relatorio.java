@@ -20,8 +20,10 @@ public class Relatorio implements Serializable{
 
     public Relatorio(List<AtributoModel> atributos) {
         this.atributos = new ArrayList<>(atributos);
-        parameters.put("AtributosDataSource", new JRBeanCollectionDataSource(this.atributos));
+        JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(this.atributos);
+        parameters.put("AtributosDataSource", dataSource);
         parameters.put("title","Teste relatorio dinamico");
+        parameters.put("ReportPath","C:/Users/Emanuel Pontes SIS/OneDrive/Documentos/github/RelatorioDinamico/relatorioDinamico/src/main/resources/reports/");
     }
 
     public Map<String, Object> getParameters() {
