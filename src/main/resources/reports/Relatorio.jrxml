@@ -9,16 +9,16 @@
 		</queryString>
 		<field name="name" class="java.lang.String"/>
 		<field name="description" class="java.lang.String"/>
-		<field name="priority" class="java.lang.Integer"/>
-		<field name="isVisible" class="java.lang.Boolean"/>
 		<field name="id" class="java.lang.Integer"/>
 		<field name="values" class="java.util.Collection"/>
+		<field name="type" class="java.lang.Integer"/>
 	</subDataset>
 	<subDataset name="ListTest" uuid="ffb97e73-95d9-41c5-8659-e2047e9a3f42">
 		<queryString>
 			<![CDATA[]]>
 		</queryString>
-		<field name="_THIS" class="java.lang.Object"/>
+		<field name="value" class="java.lang.String"/>
+		<field name="id" class="java.lang.Long"/>
 	</subDataset>
 	<parameter name="AtributosDataSource" class="net.sf.jasperreports.engine.data.JRBeanCollectionDataSource"/>
 	<parameter name="title" class="java.lang.String"/>
@@ -122,7 +122,7 @@
 										<property name="com.jaspersoft.studio.unit.height" value="px"/>
 									</reportElement>
 									<jr:list printOrder="Vertical">
-										<datasetRun subDataset="ListTest" uuid="1349ed84-504a-4357-8fff-5f5895ab0fcf">
+										<datasetRun subDataset="ListTest" uuid="770b77b2-b0c6-4dab-b68e-7fb487a137f8">
 											<dataSourceExpression><![CDATA[new net.sf.jasperreports.engine.data.JRBeanCollectionDataSource($F{values})]]></dataSourceExpression>
 										</datasetRun>
 										<jr:listContents height="37" width="100">
@@ -150,7 +150,7 @@
 													<textElement textAlignment="Center" verticalAlignment="Middle">
 														<font size="8"/>
 													</textElement>
-													<textFieldExpression><![CDATA[$F{_THIS}]]></textFieldExpression>
+													<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
 												</textField>
 											</frame>
 										</jr:listContents>

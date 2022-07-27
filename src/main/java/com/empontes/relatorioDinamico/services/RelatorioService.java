@@ -6,7 +6,7 @@ import java.io.FileNotFoundException;
 import java.io.InputStream;
 import java.io.OutputStream;
 
-import com.empontes.relatoriodinamico.model.Relatorio;
+import com.empontes.relatoriodinamico.model.RelatorioModel;
 
 import org.springframework.stereotype.Service;
 
@@ -29,7 +29,7 @@ import net.sf.jasperreports.export.SimpleXlsxReportConfiguration;
 @Service
 public class RelatorioService {
     
-    public String generateReport(Relatorio relatorio, OutputStream outputStream) {
+    public String generateReport(RelatorioModel relatorio, OutputStream outputStream) {
         
         String reportPath = "src/main/resources/reports/Relatorio.jrxml";
         

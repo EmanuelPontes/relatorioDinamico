@@ -7,22 +7,25 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.empontes.relatoriodinamico.model.entity.Atributo;
+import com.empontes.relatoriodinamico.model.entity.Template;
+
 import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
-public class Relatorio implements Serializable{
+public class RelatorioModel implements Serializable{
     static final long serialVersionUID = 1L;
-    private  List<AtributoModel> atributos =  new ArrayList<>();
+    private  List<Atributo> atributos =  new ArrayList<>();
 
     
 
     
     private Map<String, Object> parameters = new HashMap<>();
 
-    public Relatorio(List<AtributoModel> atributos) {
-        this.atributos = new ArrayList<>(atributos);
+    public RelatorioModel(Template template) {
+        this.atributos = new ArrayList<>(template.getAtributos());
         JRBeanCollectionDataSource dataSource = new JRBeanCollectionDataSource(this.atributos);
         parameters.put("AtributosDataSource", dataSource);
-        parameters.put("title","Teste relatorio dinamico");
+        parameters.put("title", template.getName());
         parameters.put("ReportPath","C:/Users/Emanuel Pontes SIS/OneDrive/Documentos/github/RelatorioDinamico/relatorioDinamico/src/main/resources/reports/");
     }
 
@@ -30,7 +33,7 @@ public class Relatorio implements Serializable{
         return parameters;
     }
 
-    public List<AtributoModel> getAtributos() {
+    public List<Atributo> getAtributos() {
         return this.atributos;
     }
 

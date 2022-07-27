@@ -1,4 +1,4 @@
-package com.empontes.relatoriodinamico.Interceptors;
+package com.empontes.relatoriodinamico.interceptors;
 
 import org.hibernate.exception.ConstraintViolationException;
 import org.springframework.dao.DataIntegrityViolationException;
