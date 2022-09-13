@@ -6,7 +6,6 @@ import java.util.List;
 
 import javax.servlet.http.HttpServletResponse;
 
-import com.empontes.relatoriodinamico.model.AtributoModel;
 import com.empontes.relatoriodinamico.model.RelatorioModel;
 import com.empontes.relatoriodinamico.model.entity.Atributo;
 import com.empontes.relatoriodinamico.model.entity.Template;

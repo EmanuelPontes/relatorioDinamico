@@ -1,6 +1,8 @@
 package com.empontes.relatoriodinamico.model.entity;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Column;
@@ -55,7 +57,7 @@ public class Atributo {
     },
     mappedBy = "atributos")
     @JsonIgnore
-    private List<Template> template;
+    private Set<Template> template = new HashSet();
 
     // Criar uma rela��o de 1 pra muitos para  armazenar a lista de valores de cada atributo
     public long getId() {
@@ -101,11 +103,11 @@ public class Atributo {
 
   
 
-    public List<Template> getTemplate() {
+    public Set<Template> getTemplate() {
         return this.template;
     }
 
-    public void setTemplate(List<Template> template) {
+    public void setTemplate(Set<Template> template) {
         this.template = template;
     }
 

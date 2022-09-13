@@ -1,6 +1,7 @@
 package com.empontes.relatoriodinamico.controller;
 
 import java.util.List;
+import java.util.Objects;
 
 import com.empontes.relatoriodinamico.model.entity.Atributo;
 import com.empontes.relatoriodinamico.model.entity.Template;
@@ -54,9 +55,9 @@ public class AtributoController {
     public Atributo addNew(@PathVariable Long templateId, @RequestBody Atributo atributo) {
 
         Atributo atributoNovo = this.templateRep.findById(templateId).map(template -> {
-            long attribId = atributo.getId();
+            Long attribId = atributo.getId();
 
-            if (attribId != 0L) {
+            if (!attribId.equals(null) && attribId != 0L) {
                 Atributo atrib = this.atributoRepository.findById(attribId).orElseThrow(() -> new ResourceClosedException("Atributo " + attribId + " does not exist"));
                 template.addAtributo(atrib);
                 this.templateRep.save(template);
